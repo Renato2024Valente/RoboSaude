@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eef2f5;
+}
+
+#chatbot {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+}
+
+#robot-face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #00f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f;
+    animation: blink 5s infinite;
+}
+
+.eye.left { left: 60px; }
+.eye.right { right: 60px; }
+
+.mouth {
+    width: 50px;
+    height: 15px;
+    background-color: #00f;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50px;
+    transition: height 0.3s;
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f;
+}
+
+.mouth.talking { height: 30px; }
+
+@keyframes blink {
+    0%, 90% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+    100% { transform: scaleY(1); }
+}
